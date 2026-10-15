@@ -20,3 +20,13 @@ This project uses a synthetic (simulated) dataset created for educational and an
 
 ### Important Note
 The North region is assigned a simulated price increase beginning May 1, 2025. South and West are potential comparison regions for the synthetic control analysis. All findings are for demonstration and learning purposes and should not be interpreted as real-world business results.
+
+## Data Validation (Week 1)
+
+| Notebook | Owner | What it checks |
+| --- | --- | --- |
+| `01_data_validation.ipynb` | Harishwar | Missing values, duplicate rows, data types, treatment labels; exports cleaned CSV |
+| `01b_data_validation_extended.ipynb` | Dhananjay | One row per region per day, revenue = price × units, outliers, PASS/FAIL summary |
+
+**Result:** all checks pass. 540 rows (3 regions × 180 days), no missing values, gaps or duplicates.
+Only North is treated: its price rises about 7% from 1 May 2025, while South and West stay flat and form the donor pool.
